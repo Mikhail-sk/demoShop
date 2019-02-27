@@ -1,0 +1,194 @@
+*
+  background-repeat no-repeat
+  margin 0
+  padding 0
+
+*, ::after, ::before
+  box-sizing inherit
+
+html
+  font-family Helvetica
+
+a
+  text-decoration unset
+
+.wrapper
+  margin 0 auto
+  position relative
+  width 100%
+
+header
+  align-items center
+  background-color #fff
+  border-bottom 1px solid #e6e6e6
+  display flex
+  height 48px
+  padding 10px 20px
+  position sticky
+  top 0
+  z-index 1
+
+.spacer
+  flex-grow 1 !important
+
+.left
+  font-size 20px
+
+.right
+  .cartInfo
+    display inline-block
+    line-height 1.38
+    margin-right 20px
+    span
+      display block
+      font-size 14px
+
+.logo, .qty
+  color #ff6900
+
+.logo:hover
+  color: #ec6100
+
+.list
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+  overflow hidden
+  padding 20px
+
+.card
+  display flex
+  width 290px
+
+.cardWrapper
+  display flex
+  flex 1 1 auto
+  margin 10px
+
+.cardRoot
+  border-radius 4px
+  cursor pointer
+  direction flex
+  flex 1
+  flex-direction column
+  padding 15px
+.cardRoot:hover
+  box-shadow 0 5px 20px 0 rgba(0, 0, 0, 0.2)
+
+.cardImg
+  margin-bottom 20px
+  position relative
+.cardImg img
+  height 183px
+  object-fit cover
+  width 100%
+
+.cardDesc
+  flex 1 0 auto
+.cardDesc h3
+  font-size 18px
+  font-weight 400
+  line-height 1.39
+.cardDesc p
+  color #b0b0b0
+  line-height 1.33
+  margin-top 8px
+
+.cardFooter
+  display table
+  padding-top 5px
+  width 100%
+
+.cardPrice
+  display table-cell
+  font-size 18px
+
+.cardCart
+  text-align right
+
+.btn
+  align-items center
+  border 1px solid
+  border-radius 8px
+  color #ff6900
+  display inline-flex
+  font-size 14px
+  justify-content center
+  height 37px
+  padding 0 16px
+.btn:hover
+  background-color #ffede1
+
+.cart
+  background-color #ff6900
+  color #fff
+  font-weight bold
+  float right
+
+.cart:hover
+  background-color #ec6100
+
+
+.cart__info
+  width 60%
+  h1
+    font-weight 400
+
+.cart__list
+  border-bottom 1px solid #e1e1e1
+  border-top 1px solid #e1e1e1
+  margin 24px 0
+  padding 20px 0 5px 0
+
+.cart__empty
+  font-size 16px
+  margin-bottom 15px
+
+.cart__line
+  align-items center
+  display flex
+  margin-bottom 20px
+
+.cart__line-name
+  flex 1 1 53%
+
+.cart__line-count
+  flex 1 1 27%
+  i
+    background linear-gradient(-180deg, #ffffff 0%, #f5f5f5 100%)
+    border 1px solid #c0c0c0
+    border-radius 50%
+    cursor pointer
+    display inline-block
+    font-style normal
+    font-size 20px
+    text-align center
+    width 20px
+  span
+    color #b0b0b0
+    display inline-block
+    text-align center
+    width 30px
+
+.cart__line-price
+  flex 1 1 20%
+
+.cart__line-delete
+  font-size 24px
+  color red
+  cursor pointer
+
+.cart__total
+  font-size 20px
+  text-align right
+  width 60%
+
+.cart__clean
+  color red
+  cursor pointer
+  float right
+
+
+@media (max-width: 960px)
+  .cart__info, .cart__total
+    width 100%

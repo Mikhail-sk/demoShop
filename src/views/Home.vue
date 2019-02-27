@@ -15,7 +15,7 @@
             p {{ product.desc }}
           .cardFooter
             .cardPrice
-              | {{ product.price }} {{ product.currency }}
+              | {{ money(product.price) }} ₽
             .cardCart
               .btn(
               @click="addToCart(product)"
@@ -33,6 +33,9 @@ export default {
   methods: {
     addToCart (product) {
       this.$store.commit('ADD_CART', product)
+    },
+    money (item) {
+      return (Number(item)).toLocaleString('ru')
     }
   }
 }

@@ -24,7 +24,7 @@
                         i(
                             @click="plusQty(item)"
                         ) +
-                    .cart__line-price {{ item.price }} ₽
+                    .cart__line-price {{ money(item.total) }} ₽
                     .cart__line-delete(
                         @click="del(item)"
                     ) ×
@@ -65,6 +65,9 @@ export default {
     },
     plusQty (item) {
       this.$store.commit('PLUS_QTY', item)
+    },
+    money (item) {
+      return (Number(item)).toLocaleString('ru')
     }
   }
 }
